@@ -1,0 +1,5 @@
+vendor/data
+vendor/node-red/node_modules
+vendor/node-red/.npm
+vendor/db/data
+vendor/mosquitto

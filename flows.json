@@ -1,0 +1,495 @@
+[
+    {
+        "id": "df4cceeca6a4dd96",
+        "type": "tab",
+        "label": "Preparação da base de dados",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ce803bee6fb0f282",
+        "type": "tab",
+        "label": "Coleta e armazenamento dos dados",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f4ade5334a537625",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "eca65d13b8ac4f4386529f9a3b881084.s2.eu.hivemq.cloud",
+        "port": "8883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "3",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "Welcome",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "35d84abcd2798032",
+        "type": "postgreSQLConfig",
+        "name": "database",
+        "host": "12.1.0.2",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "iot",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "password",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "489a7d15a789d626",
+        "type": "mqtt-broker",
+        "name": "Emqx Public Broker",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "52eaf5a31db89510",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "85a63498c4bc0b8d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "85a63498c4bc0b8d",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0de2cd23e1c68388",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d26af1d6b4eadf40",
+        "type": "ui_group",
+        "name": "Gauges",
+        "tab": "85a63498c4bc0b8d",
+        "order": 2,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "255da4b8115fb3db",
+        "type": "inject",
+        "z": "df4cceeca6a4dd96",
+        "name": "Prepare",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "c3797c3b959cab19"
+            ]
+        ]
+    },
+    {
+        "id": "c3797c3b959cab19",
+        "type": "postgresql",
+        "z": "df4cceeca6a4dd96",
+        "name": "CREATE TABLE",
+        "query": "create table if not exists public.environment\n(\n    id          serial\n        primary key\n        unique,\n    temperature float              not null,\n    humidity    float              not null,\n    soil        float              not null,\n    \"createdAt\" timestamp default now() not null,\n    \"updatedAt\" timestamp default now() not null\n);",
+        "postgreSQLConfig": "35d84abcd2798032",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 420,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8aa392a4cfbaca51",
+        "type": "mqtt in",
+        "z": "ce803bee6fb0f282",
+        "name": "mqtt-dht22",
+        "topic": "5c4a1abe-e3cc-4a48-a350-5ecaa14ca9ef/input-data",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "489a7d15a789d626",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "af99a2fbac6c4701",
+                "a28307847b196fbf",
+                "03c4fcaaa8265272",
+                "c6cd4d5add811677"
+            ]
+        ]
+    },
+    {
+        "id": "142a518053206b82",
+        "type": "postgresql",
+        "z": "ce803bee6fb0f282",
+        "name": "INSERT environment",
+        "query": "insert into public.environment (temperature, humidity, soil)\nvalues (\n    {{{ msg.payload.temperature }}},\n    {{{ msg.payload.humidity }}},\n    {{{ msg.payload.soil }}}\n);",
+        "postgreSQLConfig": "35d84abcd2798032",
+        "split": true,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 700,
+        "y": 100,
+        "wires": [
+            [
+                "85ee7738e7fec7f0"
+            ]
+        ],
+        "inputLabels": [
+            "environment information"
+        ],
+        "outputLabels": [
+            "result"
+        ]
+    },
+    {
+        "id": "85ee7738e7fec7f0",
+        "type": "mqtt out",
+        "z": "ce803bee6fb0f282",
+        "name": "mqtt-confirmation",
+        "topic": "5c4a1abe-e3cc-4a48-a350-5ecaa14ca9ef/confirmations",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "489a7d15a789d626",
+        "x": 990,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7726c61d62450bae",
+        "type": "ui_gauge",
+        "z": "ce803bee6fb0f282",
+        "name": "",
+        "group": "d26af1d6b4eadf40",
+        "order": 0,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Temperatura ambiente",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 700,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "af99a2fbac6c4701",
+        "type": "function",
+        "z": "ce803bee6fb0f282",
+        "name": "Get temperature",
+        "func": "return { payload: msg.payload.temperature.toFixed(2) };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 200,
+        "wires": [
+            [
+                "7726c61d62450bae"
+            ]
+        ]
+    },
+    {
+        "id": "a28307847b196fbf",
+        "type": "function",
+        "z": "ce803bee6fb0f282",
+        "name": "Get humidity",
+        "func": "return { payload: msg.payload.humidity.toFixed(1) };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "ea645b9f0b0f2f50"
+            ]
+        ]
+    },
+    {
+        "id": "ea645b9f0b0f2f50",
+        "type": "ui_gauge",
+        "z": "ce803bee6fb0f282",
+        "name": "",
+        "group": "d26af1d6b4eadf40",
+        "order": 0,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Umidade relativa",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#4acb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 690,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "03c4fcaaa8265272",
+        "type": "function",
+        "z": "ce803bee6fb0f282",
+        "name": "Get soil",
+        "func": "return { payload: msg.payload.soil };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "d22bbc832737dec1"
+            ]
+        ]
+    },
+    {
+        "id": "d22bbc832737dec1",
+        "type": "ui_gauge",
+        "z": "ce803bee6fb0f282",
+        "name": "",
+        "group": "d26af1d6b4eadf40",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade do solo",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 690,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c6cd4d5add811677",
+        "type": "function",
+        "z": "ce803bee6fb0f282",
+        "name": "Parse MQTT payload",
+        "func": "return {\n    payload: {\n        ...msg.payload,\n        temperature: Number(msg.payload.temperature.toFixed(2)),\n        humidity: Number(msg.payload.humidity.toFixed(1)),\n    }\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "142a518053206b82"
+            ]
+        ]
+    }
+]

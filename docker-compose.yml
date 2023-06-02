@@ -1,0 +1,38 @@
+version: "3.7"
+
+services:
+  node-red:
+    image: nodered/node-red:latest
+    environment:
+      - TZ=America/Sao_Paulo
+    restart: always
+    user: root
+    privileged: true
+    ports:
+      - "1880:1880"
+    networks:
+      - iotinternal
+    volumes:
+      - ./vendor/node-red:/data
+
+  db:
+    image: postgres:14.7
+    container_name: pg-database
+    restart: always
+    ports:
+      - 5432:5432
+    command: -c 'config_file=/etc/postgresql/postgresql.conf'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: iot
+      PGDATA: /var/lib/postgresql/data
+    networks:
+      - iotinternal
+    volumes:
+      - ./vendor/db/data:/var/lib/postgresql/data
+      - ./vendor/db/postgresql.conf:/etc/postgresql/postgresql.conf
+
+networks:
+  iotinternal:
+    driver: bridge
